@@ -26,7 +26,7 @@ class Servidor():
 
 		while True:
 			msg = input('->')
-			if msg == 'salir':
+			if msg == 'salir' or msg =='exit':
 				self.sock.close()
 				sys.exit()
 			else:

@@ -18,7 +18,7 @@ class Cliente():
 
 		while True:
 			msg = input('->')
-			if msg != 'salir':
+			if ((msg != 'salir') and (msg != 'exit')):
 				b = msg.encode("UTF-8")
 				msg = pybase64.b64encode(b)
 				self.send_msg(msg)
@@ -32,6 +32,7 @@ class Cliente():
 				data = self.sock.recv(1024)
 				if data:
 					data = pickle.loads(data)
+					print(data)
 					data = pybase64.b64decode(data)
 					data = data.decode("UTF-8")
 					print(data)
