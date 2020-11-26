@@ -30,6 +30,8 @@ class Cliente():
 
 			self.e.delete(0,END)
 
+		top.bind('<Return>', send)
+
 		self.txt = Text(top)
 		self.txt.grid(row=0,column=0,columnspan=2)
 
